@@ -31,6 +31,12 @@
 <p>问：能否设置在句首的#不设定为标题？</p>
 <p>答：目前发现的方案是可以在句首加入一个空格。是否存在不加入空格的方案？</p>
 ]]></content>
+      <categories>
+        <category>blog学习</category>
+      </categories>
+      <tags>
+        <tag>markdown语法</tag>
+      </tags>
   </entry>
   <entry>
     <title>about</title>
