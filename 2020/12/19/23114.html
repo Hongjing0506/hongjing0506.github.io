@@ -18,37 +18,23 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 
-<script>
-    (function(){
-        if(''){
-            if (prompt('请输入文章密码') !== ''){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
-
-
-
-
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"hongjing0506.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文章将记录基于Hexo以及Next主题搭建github博客*并进行相应优化的全过程。过程中参考了很多他人的文章，详见参考资料。同时，在他人的基础上进行整合或有所修改的，将标记表示自己进行了相应的修改。 另外，由于本文属于回忆，因此可能有些步骤忘记。同时会记录一些搭建过程中暂时没能解决的问题。 修改文章目录中，子标题太长无法显示全面的问题*修改主页中文章的摘要内容字数（unsolved）他人的设置">
+  <meta name="description" content="文章已加密，请输入密码查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Hexo搭建gitblog心得">
 <meta property="og:url" content="https://hongjing0506.github.io/2020/12/19/23114.html">
 <meta property="og:site_name" content="Hongjing&#39;s Blog">
-<meta property="og:description" content="本文章将记录基于Hexo以及Next主题搭建github博客*并进行相应优化的全过程。过程中参考了很多他人的文章，详见参考资料。同时，在他人的基础上进行整合或有所修改的，将标记表示自己进行了相应的修改。 另外，由于本文属于回忆，因此可能有些步骤忘记。同时会记录一些搭建过程中暂时没能解决的问题。 修改文章目录中，子标题太长无法显示全面的问题*修改主页中文章的摘要内容字数（unsolved）他人的设置">
+<meta property="og:description" content="文章已加密，请输入密码查看">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-19T06:03:16.000Z">
-<meta property="article:modified_time" content="2020-12-20T10:56:03.947Z">
+<meta property="article:modified_time" content="2020-12-20T11:17:17.095Z">
 <meta property="article:author" content="Hongjing Chen">
-<meta property="article:tag" content="Blog搭建">
+<meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://hongjing0506.github.io/2020/12/19/23114.html">
@@ -244,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-20 18:56:03" itemprop="dateModified" datetime="2020-12-20T18:56:03+08:00">2020-12-20</time>
+                <time title="修改时间：2020-12-20 19:17:17" itemprop="dateModified" datetime="2020-12-20T19:17:17+08:00">2020-12-20</time>
               </span>
 
           
@@ -260,7 +246,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>780</span>
+              <span>657</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -279,30 +265,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文章将记录基于Hexo以及Next主题搭建github博客<em>*并进行相应优化的全过程。过程中参考了很多他人的文章，详见参考资料。同时，在他人的基础上进行整合或有所修改的，将标记</em>表示自己进行了相应的修改。</p>
-<p>另外，由于本文属于回忆，因此可能有些步骤忘记。同时会记录一些搭建过程中暂时没能解决的问题。</p>
-<h3 id="修改文章目录中，子标题太长无法显示全面的问题"><a href="#修改文章目录中，子标题太长无法显示全面的问题" class="headerlink" title="修改文章目录中，子标题太长无法显示全面的问题"></a>修改文章目录中，子标题太长无法显示全面的问题</h3><h3 id="修改主页中文章的摘要内容字数（unsolved）"><a href="#修改主页中文章的摘要内容字数（unsolved）" class="headerlink" title="*修改主页中文章的摘要内容字数（unsolved）"></a>*修改主页中文章的摘要内容字数（unsolved）</h3><p>他人的设置步骤：</p>
-<p>打开<strong>themes\next\_config.yml</strong>，搜索关键字<strong>auto_excerpt</strong>，修改<strong>length</strong>即可修改阅读全文前的字数</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">auto_excerpt:</span></span><br><span class="line">	<span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">	<span class="attr">length:</span> <span class="number">150</span></span><br></pre></td></tr></table></figure>
-<p>但是经过我的测试，没有在_config.yml中找到相应的属性，只找到了</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>目前还不清楚应该怎么修改摘要字数的问题，主页中文章摘要过长了。</p>
-<p>修改日期：2020/12/20</p>
-<h3 id="更改页面的字体（含更改google字体库）"><a href="#更改页面的字体（含更改google字体库）" class="headerlink" title="*更改页面的字体（含更改google字体库）"></a>*更改页面的字体（含更改google字体库）</h3><p>打开<strong>themes\next\_config.yml</strong>，搜索关键字<strong>font</strong>，并将<strong>enable</strong>设置为<strong>true</strong></p>
-<p>修改<strong>host:</strong>为<strong>fonts.useso.com</strong>（这是因为如果使用默认的google的字体库，加载起来可能特别慢）</p>
-<p>并将<strong>global:</strong>中的<strong>family:</strong>设置为自己想要的字体，如：<strong>Times New Roman</strong></p>
-<p>同时设置字号<strong>size:</strong>为<strong>1</strong></p>
-<p>修改日期：2020/12/20</p>
-<h3 id="修改文章底部的-号的标签，改为图标"><a href="#修改文章底部的-号的标签，改为图标" class="headerlink" title="*修改文章底部的#号的标签，改为图标"></a>*修改文章底部的#号的标签，改为图标</h3><p>修改模板<strong>themes\next\layout_macro/post.swig</strong></p>
-<p>*搜索<strong>rel=”tag”&gt;</strong> ,在其后添加</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i <span class="class"><span class="keyword">class</span>=</span><span class="string">&quot;fa fa-tag&quot;</span>&gt;&lt; /i&gt;</span><br></pre></td></tr></table></figure>
-<p>并删除</p>
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-variable">&#123;&#123; <span class="name">tag_indicate</span> &#125;&#125;</span><span class="xml"> </span></span><br></pre></td></tr></table></figure>
-<p>因此，该行代码变为 </p>
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;</span></span></span><span class="template-variable">&#123;&#123; <span class="name">url_for</span>(<span class="name">tag.path</span>) &#125;&#125;</span><span class="xml"><span class="tag"><span class="string">&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;tag&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-tag&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><span class="template-variable">&#123;&#123; <span class="name">tag.name</span> &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p><strong>效果图</strong>：<a href="![](https://raw.githubusercontent.com/Hongjing0506/pictures/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201220185006.png)">![](https://raw.githubusercontent.com/Hongjing0506/pictures/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201220185006.png)</a></p>
-<p>修改日期：2020/12/20</p>
-
+        <div id="hexo-blog-encrypt" data-wpm="密码输入错误" data-whm="密码正确"><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="您好, 请输入密码" /><label>您好, 请输入密码</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="bebf6ed3095a6c5d4fea7e36ce1bd0e1fc37e0ff0ac2ae3723f27a7601aa330b">1b693c4938223286468132b2f7068bf6fbad41c0eee84ef229e7523a025c179af08c0acdca9adf48bcb41fa813f593a6b5d327f63b7850bd67a6e3dbcc123bb5f0571b2e4c49efc55d36273caa28168c1ef24a871624eb289bf3ef65dd31c038e39ea6a56da4b496d58f7a7c5502fcb4e26e399066540b5ace2850a886cdb7b24e8c19dd21b5a57d77191b26f020daf9ec06e888eebb4b4e13c980a78b90dfed8cb089e97f5ac7a72f4fa37a3c5ee9ccf7c78d80d59881c49354d0e0d42d1543c636567d1d4ff06fbba72d6ade84f855a0d026b37182e8fab52e2d5b4c9f7f253881a5f4c6f13eaa37ada72e17c85335eea5acac9817bb10a7a003b4d69836cd6f6f89032299c8a4d86a8906e7a3552f159af5b2a9a95633d299c90dedd6f08329fbd25c3885b3fbe1d757b8e4ec1eec3ec5643f300b11a03b8cb3d7a71827274613ce49de946586ac3b706a7272e41b79090f5090b33e85358847de01628281d7c8d68076df9da11a1bab9a852bdbef992395104baf0aae47b31fcfb542b8f895b752440e023c24c587dd2cc4717fd14cac472336f8afc8020d2217f633eb0e78c217e852b55a9bccd36826abc32902d26b8d5fd8b5ca6c538360c3097a284610f2f25668d23ecad6d368d363eed1568ebeb8b5c038ec19eeb1788fbecaf59c1bbe320719e5d8a99f032e4f7aa00bd136e1b97e9e70cead94836be0f1a7aeea77cf22279c6e664fb19a7b1c73ef6aad3009efa3339d695f3940cb487b45072308b4f17eb02e271a6adca1ee2181aae8aaceb89fa319423e9a5a65610afb7c82d6150a46d4961e306bf1b20cf9aee3c0386f3f13d9767e3651a9e9ede6d317c1427141966d28db57eb21599ef46cd677d4ce0a441d3111923c9747201a4a51d4290f9208ff31fa9e36d4ff8286dfa013caeaf7886a63078ab2055ff0ef2d4b3344d342db73f8b233733c4801fa49cff0ddd4bc8dd9dd5a8e68b189dbab314de8594a2c134e60361cc4e0391de9e3431f7c085130d082f007191a0283300a2fd0e30f67a88ef0718ccc6125ffd024f3eb9c990dbfea92f2b416a75152fb17736dbdb355258a9164c237efc7a6e2cc428134d9b04196f23ec3b81f869240e9748a204bf13fac3ecca7b12acf7b370e430a2114753dabc569500ac443fb036ca5a0ca2af3b5898756087d514f8e5da974d09448e424ce75b76780ff4aca9e23f57264327391b7cd23cdc7569f876b9b305cbe274105627bbacd543816dd91bb00fec84394a70ce311fccb3a87c824a4091dd3a75eb37e2592f8eecce91081cbd978cbd34eac930a5fcc1242836262a86d6abda02f36718070ee3e58eb8b435f95ff5ddcd05ab67a92c5dfa32388585e6010cc31367cb6c5fd638952cbf6d57101bd4b401faf26ae90e5b0f65980a78cb28f25a800907abe2f910f4b8e9fc5b12ff867806cb691579b3f6c4391afa7a8ba621c61d54a3affbae59b675c11c7e2d2024344898f812ffb84d5b98ada34e6f5d27a5b55af055cce9418f98721e1700ed0ed4eada88716032377ed09372e51f5340f3d132ec485d79b4adb9d86888005a053ab10277fc9878d6f3b25fbdf1744677c7029866ecdd5c2d41f3bf6887d5c135f85065034939e2bb0bbc808f3a2468e7722d68c3d8501d6eacbacb0e5985881bff12a0722b61ac2d8556ca92f16321e78544a58b632edc2052a3ea6cf0416a30de200c108ed3c4b94f05c47ad21a9fe8a8d9c444bfe4a36337104889477360b26c5c90d608cce8cb11fdfbfb49a3cfed139f132646e7a49fcb4be9ac26cce5fb4948167440d57de7937140fee4218bc675fce04975523097ad946f089739e132961740b3978e3ebb5ca674c5fec7e077dedda168770a9dd9a6dc3ed6c5ecc9cdc1361d8edcb2263dbdc2996d88d46585f238db569acecfb507cb407159a603765e43b36e7c9aca820bb4749197940772d9ace3feffae38adc8c778245b9a5624f556bebc6566e90a58b31bd172d0c1eca60fe146b94093a816f1ee954b2febb06dcbeffed11972d00c66dd01cc9da583422d6ac52ef62ebb74892907d8bb2380bdef96c615bb3ea1f58c0a761a92dc79c1b02aba7ea80106d978df308985c61cae647325cca5a47d9ed4b075995673bf2db4eae648409656e3266a03e1bc51e9e496b25b1adfd1f8c017060aacb29ba7d7939b3d4681f1756a7e7d2c1024b9b04c34bebdbdc1331ac6315182433ca114d7fc6a7e01537599a23bda59c22b573b0568e369d92daf712ee240b8344de5583d142b81445c02bc68d238f17ac21baf35dc43d379e2edb4310dda5b1441df9433cee47863a53eb3603c9da060a961c84ffdb0eda2b1986fbe661d4e8484764a53ec0a499b9238f46d11e8184fab117cfeb4b3efd078e244e69f9fe28de06ebed8190eb5c028fdda9ea3ed83251345952066c182aebab795f9fc4b106fa4ec38f052294f48abec44da720d34f1026eae61fbb852910ace45698d45b9f44e5c7ea975e97655e6c6160b51ef016e3e9733ab7acc3ba186ad617f1dd5231aa8cb68fefb36fa46a5cd8ec6e34e05c544041f219818963ce39e272dc0b45a383b8e3b99ebcd61bc7a370d8408643e333eb32e6f19f9202d43d8b49f1a42e7e48854b7a2dd898d69f06e8e8d4d523c6104e8a5a07003ce69daaabd5cc5edbd3e3cddf5b9624e1ef690893d9b4ae241722b69b018a8d7964273a996d7b3aab5f33e2a31e2e1cfb2ec6b8a10276cc23793ad4a364687d4da9476cc3be6d0b55345d995735270908f35e40089510887068d70095f972ae2b4ed188b5ce21047287d77c13e5b1da496bee94e870aad88bda07f8ac0523c8b03e7d783dc607bf28a12109143ec5c684183411abfce8a59871522ad1f260167ddd20e8b1f043f2d130f70ff84a6a2e2defda73e889a25b1569bb92151ca3469f40bd0d0487e0e871384a05529c2161c88d7611049730a2fc206508b002cc7886f6f3b9e600a5cf10fb90b7fd4a2e657eea1410cb50080fbb11f1ffbfc9f45c74e766960507738e78e49593d41a64a220536b9dbd5db596598775570bc9d59952cda25359b9e3e6dd766560a09715e2a2df8a2f35bc4c2fdae8fc74eb9dc8ea38ee93cd58cf36c669a3936d6289f7c1846746618324b8da6e4d951c3380cbef9914fc6670bab92f6ae92c22ec81a5f0cdb049c6ebb593eab61fc945a4356530a193f20bea34760741e7d4ffd791ad196de05aec5cf9b7f90d942163c184b0a52c5347cfc251dedc1b66a0af9b22c282062658ef92b5b285d09aecd5433016771f918a8dcfe01c46bbbf72f644037948603af68047fc54906eb5aa7fab9b6eab1381cc501709800967d2e1ad09723b2c719ca5733e3d8f46b68bdfe45bbf05da1141df8a8d5b84012e09a8f15a8f56d8948e4af4899c4bf10e4789a56f44d590a658b381004825384dd12a5fd148cd27efeaf8ed031944f8a75c6c1eb7ab47e5a834e0a65ad5c37614ff524a7d1987c4c965e54a51cc0a94ad32f96931e70d59ccb3cb7a9ea5ac438f4c7d46a18a5e5aad8fb21a8b6899faff954067b32abe5e64d9a6ec9c3167c25d9b445ac8b76c691d7d1114c9ed4f7a882aadd7111da3526ade1047ca6d39198a06dbef86779d819d71134b7b158ce24e38615b4edc035a32dc79e461804c3b9c63080a064c3ea28f244dba58d42578934486317aa8131cdb794229b6d2da9d0cfa3e9d6bba692e56d85926d0840230e10d0e9c4e5bd5057899d4366ea6e1651b39d21757dcc6a6ea6e0a04e67861b915a7ec52a86611c5ca84eb69cbbf7debfcf87f8caa4f904a218f3e87f102fffa22a6cfd75d3b7e0fd3fb2d98f41d298c258d34d423f9a51cb4f6ce645a319a83b988b992411caa6bbe595221157d17bca3045d28e61efad4b57704d691ca601c5cbb5fcbebb53f5627310a4efbf680c602ba8890ca742a114b20bc28ca0e9fd7b8f194fa875b66a402e58cf031c155ba6fcee3d40e3841000ea04186cec83c5e5d8a6b5b8006f6486d61875eeb1c37111588896a5f75919d76fe3d7b0fdc7d22d9c2d4414e713f24d45f5f0b7b42e1b09da31f9e500b6cda70475c320accfcb7d85e38b9a7fec4cb09331f5f940507eb5bde89637be4b88c85b7775120bf8fb33d1550c8b6765e6ba699469d9d21bb2b6268aa001077e5a6f47c8c4e1fb66a970999c94b4dca162479fba3a9f0d2f02394fd996b93418dd77c98ebc1fc6d455082ac7cb3409d107437834cae713a72a856ab8bcc298f6b33b92fab2e0f6c3cab613656ebbfc9ef6f03c97f2cae1422751cf5ea7d02980a78665a02d3be27872705252d6c455a1be3b977e22f259e44730994d2149b1b083cd7e5eb1d69fbba8f2d43001b3ea61d162fbe17b0fd133f22f3130e6625a788d7fc51b826f56f9a8fa182ddb363e06080155ab6df4e64be28fce7bcec1b639d4f53897a4439b047eb52ba88d5770efc1b29264a4d4f4449fda7ece0b31f65cb71279abd66402b057e9a51badaf6d1a61d5126979af0fc25cb5b4c125bffc076181f5a03454e2769838a8e6b4b619484e56772438eb44686c0444ff17312c18ea3a5b573f6a867ffd9c1a7620a2d45e01fc216835e9c535f96f5a6810fb09875cae3844d114d26ac8257fe453b029555daf28c931c73170ccc6f260ddd914778d9b33ba5ae0445c6976137732323004d97654ea49b1f7c124211daa7749fb048f6b10040e15ab45dfe945dc6fe3e3d5c4b283ea8ca5c35e21dc3722cbc044818b2aeb7c0efbd40036c8fb4be0dba1249bbb8c0b4f3aa3d13cd0064eb4f58e03eb1adad78f5e0d5ee8c97b5cbcb0450005c0e13f9d8604bf10e8ec55668f0970e6469fe661076992565687ec5912a723c84a64f041e9030fb644d2e4d92f112c359f7062a10079dc39729a125e3cee0b5761c36299368d2dba063b90aa146ea9818be76789f4611fcdfc8817e9b0a6c28ac8bebbcd3f44ee3b2d9a5bd509bafa2581b062acda5e5f40886b4ff3097ad6611f62b528ebb36081639e3f3d8ae35d5a7a62c29793b1311969ccee925908d2437def2e8638be2906bcb69ef63ee50cef347e383553116b7b8764fd6269a49fc63da97e7338f2b837bf38c064811642308b505c8f90e1341bb478d4e3e959e54cb95a11d82bd5a528540586fd3622ec850fa405d145f97d429597f2cca1f81842b183a43607f7dc766340863cdd1b2653801c92be899cf935522a1de2b151072f649a20d4395751b576f668be767049f37ca8515ab7fbae5f4d89729ab889cd5f6daef39c5ce48c17fd078faebfc3d7f19218b472a0160350d54acb9d628fa862f031fa3b635847e40c722bf8a02c34fecacb2a8f861445fd667598fdb46d248c61a0e6486218aac61895f602e8fcd693c6e2b3d22ba2ea7e523f27804e35ff455805d2796dbe7d4ba45981e48be272d9339f03d1ef7e441177cffaa36108992f379afa2f57c5962d8912af11831698868595ce450ed50197000319086d35c3baa614cae3a0aa6c259b7623368aa80d1078aacb4d9a437afb249145897a28faf65ff483621cac13d0382e5c34a617a614d3b3f026079bdf6011a2658807d332400b248c230b339f36ee23491c9d1b73ec076bf07d688b3fc17129bf12db25984715f46f0ac54c2a00a949f24a887ba9ef5ee1fc6cfb45bf0f108ebd7d5460bfda2f3f8ab3c086efe1dc36cf2810db677c5df49a318f9e547d7c6d3ff480a5d980e7cb3d07ff97f5a5f1ee2f92b0cad8f8dff38edc266aca0832e25539a962a24ec073b31fa61cb1cc7bfb1b05f72f388642ca8fe432af651f1c817aca546ff0c2ba78696b5b7a9a39f6f06247cdf510d357f883abd59f25fc986e96ce627b95ce46f4667d8db482dfd70b17ef885d8079fc00d5a08e00db19cb9fc081e1343dd39eeecb2b097ad7e2c3bf9d511485656da42b31d3b760777a094864a70bda2a9cf40adeac5c1a8e058d461b27cbb426a8fdc2050c6bd7735306d73f7740635fa07655402f9a6496391303a8de383af9b94177eee51304abd6296ceca49ba59e99073a7aa30ee071fe2339fa69064c270d5cecbf3de956e88eb12b29c0755356a24c2967caf43e0384d9ee7e01893943dcaf768e80e7cb60c766c8284c6406d60c7df933c3de0983b9f49b60684a5e23dc4372fdbb42ed09ba8318aadab94b5890d247cea14035eda30a1c5442bfcfa476ff6d9a77006abdf237cca8830f83815240c82e6906d74fa2feda03a946519d60e69a96d31adeb4e441a66cefd912fd12b98d365bd1213f344db77e4e37b9af677698b0965ccd48cdc9866307720bbaa87e701152c43acb0ed9a652ccce4470156efd085590a86bc2ca1cbda023921ab4440e7693e63d441825ea740312acdcdf719aa5086f20a2bec0d100d51e5a5641f42ce3055b99eaddf044846f3912e08462c77a2d6d9b660a4c7199e31cc3ea614bb740cb067a61bd5c67cb68105a0ee30ee46ff9d9a670a210aca7213d46ac606d90d05eb2470ebde3a85d5e293d64c8c57d606065f9c5bbd4f8d034f09d611e670ddd91559b59efcc582c0c9703cb78b5094f554dcd70056cb37ac7700a8a28cf3093c3a0663a5d5bcc67a5ffc0837f51c68ee2c60ea740894ddbdfd6c928d5780731e11ae64de0af490b72487f56953569cb6e89d87ee26b72f8c0ccb9668fa86846d469628c8caaf9e58b329ea70c6338dcec215ef2bc1778abbc03bc2fc11daee88356d8896f67cbd77f153f3679eabff628ba1420fa062cad2c842393e0c0043f0d3b866cfd46754d4e91ad4cbae3a1397cf56630233af8d9d8bb0e29287984a6c8b28a681ade6571892f95d547c905ec73d56bf64206eecea34dd9abd2a7169a6a2e70f70b1fe668e01d147b64fb2e5595ccf8321bc748119ab81c22b736d5d87ce629dffe16011295eb8c82548e88fe4ccdd38f9ee7ce8a361d404ee1a065a78bb907a746be2107441f7c348ee64df395e262bee92bd1b0f8e29839edac8450269542b915ca0b52351b747708135b20285c86abde0be96ce6c018cb8455b537f5414ca76446ef02904df6fe20543ac211dc4c697419f6887cf2f51c523d8d30810c85598b0c18ed10ba1b565cc6155ffbb1592e972178a4cd31c278f5507aaa050579da114ab67bb7030cbaf862e2c97f201bf8ea5b7c2ec09891b2a9fd8acc3ded2ca7fa67ce06d01490e843d57301774468fa1442792181e0db7d164a170c05ecc4e2be0073b1de4a6695751e5d418dffc192faa7e0553653ab3700fd034c77eed6e27ee3c2f931ba52216f34054f74844780aa1b60270c310d7165794f86c3d6edb3112f969bfdd874328afc3576a4e9b5af06e13cf093c1aa73f4acc08c5886420f611d805739a2419bb8b54bde24699524762a503e0661cc2b1eb3d2c02ef9b2b3aed6f0166433234529f7e0958a18343836841998077fb4316a0e19f731f2641503f66e351fcb6d592e2e787c63b637ebb6000956b6f478c78c29732ce271795bdd75215721985e8e2e8445d10c94f2c9373ef1d131a884fb64e32a69d7ab34055847ebc21ab9841fad25c28e133cd9cdbc0269334f891ae2416c4f65f431b93535c8d91d00a95052d8d38e4a2bc40cf7a820e68020aacef92e9da2bdba879f8fdd5be0d224391b071955f2ae99604340ae4b05017e366</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -337,7 +300,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Blog%E6%90%AD%E5%BB%BA/" rel="tag"><i class="fa fa-tag"></i>Blog搭建</a>
+              <a href="/tags/Blog/" rel="tag"><i class="fa fa-tag"></i>Blog</a>
           </div>
 
         
@@ -411,7 +374,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95%E4%B8%AD%EF%BC%8C%E5%AD%90%E6%A0%87%E9%A2%98%E5%A4%AA%E9%95%BF%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%85%A8%E9%9D%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">修改文章目录中，子标题太长无法显示全面的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A1%B5%E4%B8%AD%E6%96%87%E7%AB%A0%E7%9A%84%E6%91%98%E8%A6%81%E5%86%85%E5%AE%B9%E5%AD%97%E6%95%B0%EF%BC%88unsolved%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">*修改主页中文章的摘要内容字数（unsolved）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%AD%97%E4%BD%93%EF%BC%88%E5%90%AB%E6%9B%B4%E6%94%B9google%E5%AD%97%E4%BD%93%E5%BA%93%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">*更改页面的字体（含更改google字体库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E7%9A%84-%E5%8F%B7%E7%9A%84%E6%A0%87%E7%AD%BE%EF%BC%8C%E6%94%B9%E4%B8%BA%E5%9B%BE%E6%A0%87"><span class="nav-number">4.</span> <span class="nav-text">*修改文章底部的#号的标签，改为图标</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
