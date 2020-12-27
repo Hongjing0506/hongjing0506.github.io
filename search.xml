@@ -73,6 +73,45 @@
       </tags>
   </entry>
   <entry>
+    <title>win10的mail应用添加邮箱账户</title>
+    <url>/2020/12/27/64326.html</url>
+    <content><![CDATA[<h2 id="Win-10-mail-应用更新邮箱"><a href="#Win-10-mail-应用更新邮箱" class="headerlink" title="Win 10 mail 应用更新邮箱"></a>Win 10 mail 应用更新邮箱</h2><p>因为邮箱比较多，有点懒得每次都打开对应的邮箱网页输入密码，希望通过一个客户端管理多个邮箱，因此今天尝试使用win10自带的mail应用。但竟然小小地踩雷了：</p>
+<p>明明输入了新的邮箱账户，提示添加成功却没有成功添加上，不停地提示我添加新的账户，没有别的选项。搜索百度好像也没有什么答案，以下记录解决问题的过程。</p>
+<h3 id="重装mail应用"><a href="#重装mail应用" class="headerlink" title="重装mail应用"></a>重装mail应用</h3><p>首先打开微软应用商店，搜索mail，将原有的mail卸载掉，并重新下载安装</p>
+<h3 id="添加邮箱账户"><a href="#添加邮箱账户" class="headerlink" title="添加邮箱账户"></a>添加邮箱账户</h3><p>我主要添加了qq邮箱，163邮箱和腾讯企业邮箱。</p>
+<h4 id="添加qq邮箱"><a href="#添加qq邮箱" class="headerlink" title="添加qq邮箱"></a>添加qq邮箱</h4><p>首先添加qq邮箱：比较简单，点击账户-添加账户，输入邮箱地址和密码即可。</p>
+<p>重点需要说明的是163邮箱和腾讯企业邮箱。</p>
+<h4 id="添加163邮箱"><a href="#添加163邮箱" class="headerlink" title="添加163邮箱"></a>添加163邮箱</h4><p>首先需要确认163邮箱的IMAP/SMTP服务已经开启。</p>
+<p>在网页上登录自己的163邮箱，然后选择邮箱设置-POP3/SMTP/IMAP，然后在开启服务：IMAP/SMTP服务中选择“开启”。</p>
+<p>按照提示，邮箱将会需要你用手机扫描二维码，发送一条短信到指定的地方。发送短信成功后，将会发放一个授权密码（这个授权密码只会显示一次，因此请妥善保管），复制这个授权密码，回到自己的win10 mail应用，点击<strong>账户-添加账户-其他账户POP, IMAP</strong>，然后输入自己163邮箱的邮箱地址，然后在密码栏输入这个授权码，点击<strong>登录</strong>就可以成功添加账户。</p>
+<h4 id="添加腾讯企业邮箱"><a href="#添加腾讯企业邮箱" class="headerlink" title="添加腾讯企业邮箱"></a>添加腾讯企业邮箱</h4><p>首先同样需要在网页上登录自己的腾讯企业邮箱，进入邮箱设置-客户端设置，将会在设置方法处看到“接收服务器”和“发送服务器”。它们分别是<strong>imap.exmail.qq.com</strong>和<strong>smtp.exmail.qq.com</strong>，它们的后面还会跟着括号（使用SSL，端口号XXX）。</p>
+<p>此时回到win10 mail应用，点击<strong>账户-添加账户-其他账户POP,IMAP</strong>，输入自己的企业邮箱地址和密码，然后点击<strong>登录</strong>，此时还不能正常收发邮件。还需要在管理账户里面，点选一下刚才添加的这个企业邮箱，然后点击<strong>更改邮箱同步设置（用于同步内容的选项）-高级邮箱设置（传入和传出邮件服务器信息）</strong>，此时将会多出“传入电子邮件服务器”和“传出（SMTP）电子邮件服务器”。将刚才找到的接收服务器和发送服务器的网址分别填入（不包括括号及括号内的内容），点击<strong>完成-保存</strong>就可以连接成功，正常收发邮件了。</p>
+]]></content>
+      <tags>
+        <tag>win10 mail应用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>typora-主题更改和字体更改</title>
+    <url>/2020/12/27/57588.html</url>
+    <content><![CDATA[<h2 id="typora主题更改以及编辑器字体更改"><a href="#typora主题更改以及编辑器字体更改" class="headerlink" title="typora主题更改以及编辑器字体更改"></a>typora主题更改以及编辑器字体更改</h2><p>如何修改一下typora编辑器的主题，还有字体？</p>
+<h3 id="准备工作：安装字体"><a href="#准备工作：安装字体" class="headerlink" title="准备工作：安装字体"></a>准备工作：安装字体</h3><p>首先需要安装想用的字体，具体过程请直接百度（例如我所使用的是思源宋体）。</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>打开typora编辑器的<strong>偏好设置-外观-获取主题</strong>，这将直接打开typora官网上已经有的主题。选择一款自己喜欢的进行下载并解压，将里面的.css文件复制，然后在typora编辑器的<strong>偏好设置-外观-打开主题文件夹</strong>，将复制的.css文件粘贴进去，然后重启typora，就可以在偏好设置-外观-主题那里选择自己想用的主题了。（注：我所使用的是autumus主题，我发现需要将同一个风格的几个.css文件都复制进去，如Autumnus.css  Autumnus-dark.css  Autumnus-fluence.css，才能选择antumus主题，不知道是不是我操作错误）</p>
+<h3 id="更换主题的字体"><a href="#更换主题的字体" class="headerlink" title="更换主题的字体"></a>更换主题的字体</h3><p>注：这不等于更换markdown文件所使用的字体，只是更改了编辑器显示的时候用的字体而已。要修改markdown的字体，请自行百度。</p>
+<p>用记事本（或写字板、其他代码编辑器等）打开自己目前正在使用的主题对应的.css文件，然后查找“font-family”，将自己想要使用的字体的名字添加到最前面去。例如在night.css文件中，查找font-family，则会找到：</p>
+<p><img src="https://raw.githubusercontent.com/Hongjing0506/pictures/master/20201227203759.png" alt></p>
+<p>此时这个主题将会首先尝试使用Helvetica Neue字体，如果系统中没有这个字体，就会尝试使用Helvetica字体，以此类推。</p>
+<p>想要使用思源宋体，则在最前面添加<strong>“思源宋体 CN Medium”, </strong>需要注意的是双引号和逗号都需要使用英文格式的。 </p>
+<p>而我自己所使用的autumns主题的css文件略有不同，它是先定义了—base-font等的变量，再在之后调用的。</p>
+<p><img src="https://raw.githubusercontent.com/Hongjing0506/pictures/master/20201227203819.png" alt></p>
+<p>因此添加的字体就需要在这里进行添加，而不是font-family，同样是添加到最前面。</p>
+<h3 id="效果图展示（以思源宋体为例）"><a href="#效果图展示（以思源宋体为例）" class="headerlink" title="效果图展示（以思源宋体为例）"></a>效果图展示（以思源宋体为例）</h3><p><img src="/2020/12/27/57588/Users\11529\AppData\Roaming\Typora\typora-user-images\image-20201227204128433.png" alt="image-20201227204128433"></p>
+]]></content>
+      <tags>
+        <tag>markdown编辑器 typora</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown学习笔记</title>
     <url>/2020/12/20/24465.html</url>
     <content><![CDATA[<h2 id="在学习markdown语法过程中同时练习"><a href="#在学习markdown语法过程中同时练习" class="headerlink" title="在学习markdown语法过程中同时练习"></a>在学习markdown语法过程中同时练习</h2><p>使用的Markdown编辑器为：Typora</p>
@@ -91,19 +130,5 @@
       <tags>
         <tag>markdown语法</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/18/16107.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
