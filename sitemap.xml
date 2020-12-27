@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hongjing0506.github.io/2020/12/27/57588.html</loc>
+    <loc>https://hongjing0506.github.io/2020/12/27/64326.html</loc>
     
     <lastmod>2020-12-27</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hongjing0506.github.io/2020/12/27/64326.html</loc>
+    <loc>https://hongjing0506.github.io/2020/12/27/57588.html</loc>
     
     <lastmod>2020-12-27</lastmod>
     
@@ -67,14 +67,28 @@
   </url>
   
   <url>
-    <loc>https://hongjing0506.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8-typora/</loc>
+    <loc>https://hongjing0506.github.io/tags/markdown%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
     <lastmod>2020-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://hongjing0506.github.io/tags/win10-mail%E5%BA%94%E7%94%A8/</loc>
+    <loc>https://hongjing0506.github.io/tags/typora/</loc>
+    <lastmod>2020-12-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hongjing0506.github.io/tags/win10/</loc>
+    <lastmod>2020-12-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hongjing0506.github.io/tags/mail%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2020-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

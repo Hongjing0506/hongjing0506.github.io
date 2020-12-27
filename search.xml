@@ -88,7 +88,8 @@
 <p>此时回到win10 mail应用，点击<strong>账户-添加账户-其他账户POP,IMAP</strong>，输入自己的企业邮箱地址和密码，然后点击<strong>登录</strong>，此时还不能正常收发邮件。还需要在管理账户里面，点选一下刚才添加的这个企业邮箱，然后点击<strong>更改邮箱同步设置（用于同步内容的选项）-高级邮箱设置（传入和传出邮件服务器信息）</strong>，此时将会多出“传入电子邮件服务器”和“传出（SMTP）电子邮件服务器”。将刚才找到的接收服务器和发送服务器的网址分别填入（不包括括号及括号内的内容），点击<strong>完成-保存</strong>就可以连接成功，正常收发邮件了。</p>
 ]]></content>
       <tags>
-        <tag>win10 mail应用</tag>
+        <tag>win10</tag>
+        <tag>mail应用</tag>
       </tags>
   </entry>
   <entry>
@@ -108,7 +109,8 @@
 <h3 id="效果图展示（以思源宋体为例）"><a href="#效果图展示（以思源宋体为例）" class="headerlink" title="效果图展示（以思源宋体为例）"></a>效果图展示（以思源宋体为例）</h3><p><img src="/2020/12/27/57588/Users\11529\AppData\Roaming\Typora\typora-user-images\image-20201227204128433.png" alt="image-20201227204128433"></p>
 ]]></content>
       <tags>
-        <tag>markdown编辑器 typora</tag>
+        <tag>markdown编辑器</tag>
+        <tag>typora</tag>
       </tags>
   </entry>
   <entry>
